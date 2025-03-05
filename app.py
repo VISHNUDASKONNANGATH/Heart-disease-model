@@ -216,10 +216,10 @@ diet_plans = {
 
 # **Display Diet Plan in a Single Expander**
 with st.expander("📋 **Diet Chart**", expanded=False):
-    st.markdown(f"<h2 class='sub-header'>🍽️ Diet Plan for {country} </h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 class='sub-header'>📋 Diet Plan for {country} </h2>", unsafe_allow_html=True)
 
     # **Breakfast**
-    st.markdown("### 🥣 Breakfast")
+    st.markdown("### 🍑 Breakfast")
     for item in diet_plans[country]["Breakfast"]:
         st.write(f"- ✅ {item}")
 
@@ -229,8 +229,8 @@ with st.expander("📋 **Diet Chart**", expanded=False):
         st.write(f"- ✅ {item}")
 
     # **Dinner**
-    st.markdown("### 🍽️ Dinner")
+    st.markdown("### 🍜 Dinner")
     for item in diet_plans[country]["Dinner"]:
         st.write(f"- ✅ {item}")
 
-st.success("💡 **Tip:** Eat fresh, avoid processed food, and stay hydrated! 🥗💧")
+st.success("💡 **Tip:** Eat fresh, avoid processed food, and stay hydrated!")
