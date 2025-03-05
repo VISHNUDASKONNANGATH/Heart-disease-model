@@ -12,7 +12,7 @@ model = joblib.load("trained_model.sav")
 st.title("❤️ Heart Disease Prediction App")
 
 # User Inputs
-age = st.number_input("Age", min_value=20, max_value=100, value=0, step=1)
+age = st.number_input("Age", min_value=20, max_value=100, value=20, step=1)
 
 sex = st.selectbox("Sex", options=[0, 1], format_func=lambda x: "Female" if x == 0 else "Male")
 
