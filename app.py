@@ -12,15 +12,15 @@ model = joblib.load("trained_model.sav")
 st.title("❤️ Heart Disease Prediction App")
 
 # User Inputs
-age = st.number_input("Age", min_value=20, max_value=100, value=50, step=1)
+age = st.number_input("Age", min_value=20, max_value=100, value=0, step=1)
 
 sex = st.selectbox("Sex", options=[0, 1], format_func=lambda x: "Female" if x == 0 else "Male")
 
 cp = st.text_input("Chest Pain Type (CP)")
 
-trestbps = st.slider("Resting Blood Pressure (Trestbps)", min_value=80, max_value=200, value=120)
+trestbps = st.slider("Resting Blood Pressure (Trestbps)", min_value=80, max_value=200, value=0)
 
-chol = st.slider("Serum Cholesterol (Chol)", min_value=100, max_value=600, value=200)
+chol = st.slider("Serum Cholesterol (Chol)", min_value=100, max_value=600, value=0)
 
 fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl (FBS)", options=[0, 1],
                    format_func=lambda x: "No (0)" if x == 0 else "Yes (1)")
@@ -28,7 +28,7 @@ fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl (FBS)", options=[0, 1],
 restecg = st.selectbox("Resting ECG Results (Restecg)", options=[0, 1, 2],
                        format_func=lambda x: ["Normal (0)", "ST-T Wave Abnormality (1)", "Left Ventricular Hypertrophy (2)"][x])
 
-thalach = st.slider("Maximum Heart Rate Achieved (Thalach)", min_value=60, max_value=220, value=150)
+thalach = st.slider("Maximum Heart Rate Achieved (Thalach)", min_value=60, max_value=220, value=0)
 
 exang = st.selectbox("Exercise-Induced Angina (Exang)", options=[0, 1],
                      format_func=lambda x: "No (0)" if x == 0 else "Yes (1)")
